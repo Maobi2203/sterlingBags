@@ -1,0 +1,73 @@
+.bestsellers {
+  background: #f9f9f9;
+  padding: 40px;
+  text-align: center;
+}
+
+.bestsellers h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.writeUp {
+  /* font-weight: bold; */
+  font-size: clamp(0.9rem, 3vw, 1.2rem);
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding-bottom: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.card h4 {
+  margin-top: 8px;
+  font-size: 1.1rem;
+}
+
+.price {
+  color: #555;
+  margin: 4px 0;
+}
+
+button.shop {
+  background: transparent;
+  color: black;
+  border: 2px solid black;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 18px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.linkBtn {
+  color: black;
+  text-decoration: none;
+}
+button.shop:hover {
+  /* opacity: 0.85; */
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+button:hover {
+  opacity: 0.85;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}

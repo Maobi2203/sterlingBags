@@ -1,0 +1,311 @@
+.bestsellers {
+  background: #f9f9f9;
+  padding: 40px;
+  text-align: center;
+}
+
+.bestsellers h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.writeUp {
+  /* font-weight: bold; */
+  font-size: clamp(0.9rem, 3vw, 1.2rem);
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding-bottom: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.card h4 {
+  margin-top: 8px;
+  font-size: 1.1rem;
+}
+
+.price {
+  color: #555;
+  margin: 4px 0;
+}
+
+/* button.designer {
+  background: transparent;
+  color: black;
+  margin: 1rem; /* scales with screen size */
+/* padding: 0.6em 1.2em; makes button adapt */
+/* font-size: clamp(0.8rem, 2vw, 1.1rem); responsive text size */
+/* cursor: pointer;
+  border-radius: 0.4em;
+  border: 2px solid black;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+} */
+
+/* Hover effect */
+/* button.designer:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+} */
+
+/* Extra responsiveness for very small screens */
+/* @media (max-width: 600px) {
+  button.designer {
+    padding: 0.5em 1em;
+    font-size: 0.85rem;
+    margin: 0.5rem;
+  }
+} */
+
+/* @media (max-width: 400px) {
+  button.designer { */
+/* width: 100%; full width on tiny screens */
+/* font-size: 0.8rem;
+    margin: 0.3rem 0;
+  }
+} */
+
+button.designer {
+  background: transparent;
+  padding: 0.6em 1.2em; /* makes button adapt */
+  margin: 1rem; /* scales with screen size */
+
+  color: black;
+  /* margin: 10px; */
+  cursor: pointer;
+  border-radius: 4px;
+  border: 2px solid black;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button.designer:hover {
+  /* opacity: 0.85; */
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Extra responsiveness for very small screens */
+@media (max-width: 600px) {
+  button.designer {
+    padding: 0.5em 1em;
+    font-size: 0.85rem;
+    margin: 0.5rem;
+  }
+}
+
+@media (max-width: 450px) {
+  button.designer {
+    width: 100%; /*full  width on tiny screens */
+    font-size: 0.8rem;
+    margin: 0.3rem 0;
+    /* background-color: red; */
+  }
+}
+
+button.shop {
+  background: transparent;
+  color: black;
+  border: 2px solid black;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 18px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+button.shop:hover {
+  /* opacity: 0.85; */
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+button:hover {
+  opacity: 0.85;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+@media (min-width: 830px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 450px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* applied when item is in cart */
+.inCart {
+  background-color: #2ecc71; /* green */
+  color: white;
+}
+
+/* if you want to tweak the remove look */
+.inCart:hover {
+  filter: brightness(0.95);
+}
+
+/* base button */
+.cartBtn {
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #222;
+  background: transparent;
+  color: #111;
+  cursor: pointer;
+  transition: background-color 150ms ease, color 150ms ease,
+    border-color 150ms ease;
+  font-weight: 600;
+}
+
+/* hover state for normal button */
+.cartBtn:hover {
+  background: rgb(166, 217, 166);
+}
+
+/* when item is in cart — green background + white text */
+.inCart {
+  background-color: #22c55e; /* green */
+  color: #ffffff;
+  border-color: #16a34a;
+}
+
+/* make disabled buttons look inactive (if you use disabled) */
+.cartBtn:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+}
+
+/* focus visible for keyboard users */
+.cartBtn:focus-visible {
+  outline: 3px solid rgba(34, 197, 94, 0.25);
+  outline-offset: 2px;
+}
+
+/* .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 15px 30px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+} */
+
+/* .navLinks {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navLinks li {
+  position: relative;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 8px;
+  transition: color 0.3s ease;
+}
+
+.navLinks a:hover {
+  color: #000;
+} */
+
+/* Dropdown */
+/* .dropdownMenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  overflow: hidden;
+  min-width: 160px;
+  z-index: 100;
+}
+
+.dropdownMenu li {
+  padding: 10px;
+  white-space: nowrap;
+}
+
+.dropdownMenu li a {
+  display: block;
+  color: #333;
+}
+
+.dropdownMenu li:hover {
+  background: #f4f4f4;
+}
+
+.dropdown:hover .dropdownMenu {
+  display: block;
+}
+
+/* Hamburger (mobile) */
+/* .hamburger {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+} */
+
+/* Responsive */
+/* @media (max-width: 830px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navLinks {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    display: none;
+  }
+
+  .navLinks.active {
+    display: flex;
+  }
+
+  .dropdownMenu {
+    position: static;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  .dropdownMenu li {
+    padding: 8px 0;
+  }
+} */

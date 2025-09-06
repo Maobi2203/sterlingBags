@@ -1,0 +1,388 @@
+* {
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 16px; */
+  padding: clamp(8px, 2vw, 16px);
+  background: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-size: 1.1rem;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  max-width: 100%;
+  flex-wrap: wrap; /* i added this*/
+}
+.navbar > * {
+  flex: unset; /* this was one*/
+}
+
+.logo {
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  font-weight: bold;
+}
+/* .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+} */
+
+/* Dropdown */
+/* .dropdownContent {
+  margin-top: 5px;
+  display: block;
+  position: absolute;
+  background: white;
+  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  list-style-type: none;
+  text-align: center;
+  border-radius: 6px;
+  overflow: hidden;
+  min-width: 160px;
+  border-radius: 6px;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.dropdownContent p a {
+  text-decoration: none;
+  font-size: 1.1rem;
+} */
+
+.dropdownContent {
+  margin-top: 0px;
+  display: none; /* hidden by default */
+  position: absolute;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  list-style-type: none;
+  text-align: center;
+  border-radius: 6px;
+  min-width: 160px;
+  z-index: 100;
+}
+
+/* Dropdown items */
+.dropdownContent p a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: #333;
+  display: block;
+  padding: 10px;
+}
+
+.dropdownContent p a:hover {
+  background: #f4f4f4;
+  color: #000;
+}
+
+/* Show dropdown on hover (desktop only) */
+.dropdown:hover .dropdownContent {
+  display: block;
+}
+
+/* --- Responsive Fixes --- */
+@media (max-width: 830px) {
+  .dropdownContent {
+    /* position: static; no absolute positioning */
+    /* background: transparent; */
+    /* box-shadow: none; */
+    min-width: 30%;
+    text-align: center;
+    display: none; /* keep visible when parent expands */
+    margin: 0;
+    padding-left: 10px;
+  }
+
+  .dropdownContent p a {
+    padding: 8px 0;
+    font-size: 1rem;
+  }
+
+  .dropdownContent p a:hover {
+    background: none;
+    color: #000;
+  }
+}
+
+/* ///////////////////// */
+
+/* drop down for shop by category */
+
+.dropdownCategory {
+  margin-top: 0px;
+  display: none; /* hidden by default */
+  position: absolute;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  list-style-type: none;
+  text-align: center;
+  border-radius: 6px;
+  min-width: 160px;
+  z-index: 100;
+}
+
+/* Dropdown items */
+.dropdownCategory p a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: #333;
+  display: block;
+  padding: 10px;
+}
+
+.dropdownCategory p a:hover {
+  background: #f4f4f4;
+  color: #000;
+}
+
+/* Show dropdown on hover (desktop only) */
+.dropdown:hover .dropdownCategory {
+  display: block;
+}
+
+/* --- Responsive Fixes --- */
+@media (max-width: 830px) {
+  .dropdownCategory {
+    min-width: 30%;
+    text-align: center;
+    display: none; /* keep visible when parent expands */
+    margin: 0;
+    padding-left: 10px;
+  }
+
+  .dropdownCategory p a {
+    padding: 8px 0;
+    font-size: 1rem;
+  }
+
+  .dropdownCategory p a:hover {
+    background: none;
+    color: #000;
+  }
+}
+
+/*  */
+.dropdownMenu {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  overflow: hidden;
+  min-width: 160px;
+  z-index: 100;
+}
+
+.dropdownBar li {
+  text-align: center;
+  padding: 10px;
+  white-space: nowrap;
+  margin-left: 10px;
+}
+
+.dropdownBar li a {
+  text-decoration: none;
+  /* display: block; */
+  color: #333;
+}
+
+.dropdownBar li:hover {
+  background: #f4f4f4;
+}
+
+.dropdown:hover .dropdownMenu {
+  display: block;
+}
+.barIcon {
+  text-align: center;
+  /* display: none; */
+}
+
+.navLinks {
+  text-align: center;
+  display: flex;
+}
+
+.navRight {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+/* .navRight {
+  text-align: center;
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+} */
+
+.links {
+  text-decoration: none;
+  margin-right: 5px;
+  color: black;
+}
+.links:hover {
+  text-decoration: underline;
+}
+
+.navLink2 {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+/* .navLink2 {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  list-style-type: none;
+} */
+
+.navRight div a {
+  text-decoration: none;
+  color: black;
+}
+.navRight div a:hover {
+  text-decoration: underline;
+}
+
+.navRightIcon {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
+.navRightIcon:hover,
+.barIcon:hover {
+  color: rgb(217, 115, 132);
+}
+
+@media (max-width: 1000px) {
+  /* .barIcon {
+    display: block;
+  } */
+  /* .navLinks {
+    display: none;
+  } */
+  .navLinks {
+    /* display: none; hidden until toggled */
+    flex-direction: column;
+    width: 100%;
+    background: white;
+    position: absolute;
+    z-index: 3;
+    top: 80px; /* height of navbar */
+    left: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    transition: all 2s;
+  }
+  .navLink2 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    list-style-type: none;
+  }
+}
+
+/*
+.nav {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav li {
+  margin-left: 1rem;
+}
+.link {
+  text-decoration: none;
+  color: black;
+}
+.nav li a {
+  color: black;
+}
+a {
+  text-decoration: none;
+}
+
+.nav li:hover {
+  text-decoration: underline;
+}
+
+.navIcon:hover {
+  color: rgb(229, 128, 145);
+}
+
+/* icons */
+
+/* .barIcon {
+  /* width: 30px; */
+/* background-color: red;
+  text-align: center;
+} */
+/* .navLinks {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .navLinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    display: none;
+  }
+  .navLinks li {
+    text-align: center;
+    margin-bottom: 5px;
+    width: 200px;
+
+    margin-right: 50px;
+  }
+}
+
+.test {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  max-width: 100%;
+  
+}
+.test > * {
+  background-color: pink;
+  flex: 1;
+  margin: 5px;
+}  */
+/* 
+  .nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* height of navbar */
+/* left: 0; */
+/* width: 100%;
+    background: white;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .menuToggle {
+    display: block;
+  }
+
+  .nav li {
+    margin: 0.5rem 0;
+  } */

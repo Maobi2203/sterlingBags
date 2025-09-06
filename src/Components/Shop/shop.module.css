@@ -1,0 +1,145 @@
+.bestsellers {
+  background: #f9f9f9;
+  padding: 40px;
+  text-align: center;
+}
+
+.bestsellers h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.writeUp {
+  /* font-weight: bold; */
+  font-size: clamp(0.9rem, 3vw, 1.2rem);
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding-bottom: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.card h4 {
+  margin-top: 8px;
+  font-size: 1.1rem;
+}
+
+.price {
+  color: #555;
+  margin: 4px 0;
+}
+
+button.shop {
+  background: transparent;
+  color: black;
+  border: 2px solid black;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 18px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+button.shop:hover {
+  /* opacity: 0.85; */
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+button:hover {
+  opacity: 0.85;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+@media (min-width: 830px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 450px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* shop.module.css (add these) */
+
+.cartBtn {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 150ms ease;
+  font-weight: 600;
+}
+
+.cartBtn:hover {
+  opacity: 0.9;
+}
+
+/* applied when item is in cart */
+.inCart {
+  background-color: #2ecc71; /* green */
+  color: white;
+}
+
+/* if you want to tweak the remove look */
+.inCart:hover {
+  filter: brightness(0.95);
+}
+
+/* base button */
+.cartBtn {
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #222;
+  background: transparent;
+  color: #111;
+  cursor: pointer;
+  transition: background-color 150ms ease, color 150ms ease,
+    border-color 150ms ease;
+  font-weight: 600;
+}
+
+/* hover state for normal button */
+.cartBtn:hover {
+  background: rgb(166, 217, 166);
+}
+
+/* when item is in cart — green background + white text */
+.inCart {
+  background-color: #22c55e; /* green */
+  color: #ffffff;
+  border-color: #16a34a;
+}
+
+/* make disabled buttons look inactive (if you use disabled) */
+.cartBtn:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+}
+
+/* focus visible for keyboard users */
+.cartBtn:focus-visible {
+  outline: 3px solid rgba(34, 197, 94, 0.25);
+  outline-offset: 2px;
+}
