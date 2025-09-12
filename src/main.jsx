@@ -20,6 +20,9 @@ import CartPage1 from "./Components/CartPage/CartPage1.jsx";
 import Shop1 from "./Components/Shop/Shop1.jsx";
 // const [gucci, setGucci] = useState(products);
 import CheckoutPage from "./Components/CheckOutPage/CheckOutPage.jsx";
+import PaymentSuccess from "./Components/PaymentSuccess/PaymentSuccess.jsx";
+import { FavoriteProvider } from "./Favorite  context/FavoriteContext.jsx";
+import FavoritePage from "./Components/FavoritePage/FavoritePage.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -45,6 +48,14 @@ const router = createBrowserRouter([
         path: "/checkout",
         element: <CheckoutPage />,
       },
+      {
+        path: "/payment-success",
+        element: <PaymentSuccess />,
+      },
+      {
+        path: "/favorite",
+        element: <FavoritePage />,
+      },
     ],
   },
   {
@@ -55,7 +66,9 @@ const router = createBrowserRouter([
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <CartProvider>
-      <RouterProvider router={router} />
+      <FavoriteProvider>
+        <RouterProvider router={router} />
+      </FavoriteProvider>
     </CartProvider>
   </StrictMode>
 );

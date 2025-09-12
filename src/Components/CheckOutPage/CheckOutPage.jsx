@@ -4,7 +4,7 @@ import styles from "./checkOutPage.module.css";
 
 const CheckoutPage = () => {
   const { items, clearCart } = useCart1();
-  const [paymentMethod, setPaymentMethod] = useState("card");
+  const [paymentMethod, setPaymentMethod] = useState("FlutterWave");
 
   const totalPrice = items.reduce(
     (sum, item) => sum + item.price * item.quantity,
@@ -29,7 +29,32 @@ const CheckoutPage = () => {
       )}`
     );
 
-    clearCart(); // Empty the cart after order
+    const phoneNumber = "2347034687590"; // Replace with your WhatsApp number
+    const orderMessage = `🛒 New Order Received!\n\nItems:\n${items
+      .map(
+        (i) =>
+          `- ${i.name} × ${i.quantity} = ${formatPrice(i.price * i.quantity)}`
+      )
+      .join("\n")}\n\nTotal: ${formatPrice(
+      totalPrice
+    )}\nPayment Method: ${paymentMethod}`;
+
+    // Redirect to Flutterwave
+    // window.location.href = "https://sandbox.flutterwave.com/pay/uyxrdzhfw1et";
+    // window.location.href = "https://sandbox.flutterwave.com/pay/kjrmoh8nlcnt";
+    // window.location.href = "https://sandbox.flutterwave.com/pay/nfjgnfbbllsm";
+    window.open(
+      "https://sandbox.flutterwave.com/pay/nfjgnfbbllsm",
+      "_blank" // this makes it open in a new tab
+    );
+
+    // Also open WhatsApp with order details
+    window.open(
+      `https://wa.me/${phoneNumber}?text=${encodeURIComponent(orderMessage)}`,
+      "_blank"
+    );
+
+    // clearCart(); // Empty the cart after order
   };
 
   return (
@@ -63,10 +88,11 @@ const CheckoutPage = () => {
             checked={paymentMethod === "card"}
             onChange={(e) => setPaymentMethod(e.target.value)}
           />
-          Pay with Card
+          Pay with Flutterwave
         </label>
         <label>
           <input
+            disabled={true}
             type="radio"
             value="transfer"
             checked={paymentMethod === "transfer"}
@@ -76,6 +102,7 @@ const CheckoutPage = () => {
         </label>
         <label>
           <input
+            disabled={true}
             type="radio"
             value="cod"
             checked={paymentMethod === "cod"}

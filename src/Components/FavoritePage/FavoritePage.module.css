@@ -1,0 +1,101 @@
+.favoritePage {
+  padding: 40px;
+  text-align: center;
+}
+
+.favoritePage h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  padding-bottom: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.imageWrapper {
+  position: relative;
+}
+
+.heartIcon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 1.3rem;
+  color: #22c55e;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.heartIcon:hover {
+  color: #e63946;
+  transform: scale(1.2);
+}
+
+/* applied when item is in cart */
+.inCart {
+  background-color: #2ecc71; /* green */
+  color: white;
+}
+
+/* if you want to tweak the remove look */
+.inCart:hover {
+  filter: brightness(0.95);
+}
+
+/* base button */
+.cartBtn {
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #222;
+  background: transparent;
+  color: #111;
+  cursor: pointer;
+  transition: background-color 150ms ease, color 150ms ease,
+    border-color 150ms ease;
+  font-weight: 600;
+}
+
+/* hover state for normal button */
+.cartBtn:hover {
+  background: rgb(166, 217, 166);
+}
+
+/* when item is in cart — green background + white text */
+.inCart {
+  background-color: #22c55e; /* green */
+  color: #ffffff;
+  border-color: #16a34a;
+}
+
+/* make disabled buttons look inactive (if you use disabled) */
+.cartBtn:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+}
+
+/* focus visible for keyboard users */
+.cartBtn:focus-visible {
+  outline: 3px solid rgba(34, 197, 94, 0.25);
+  outline-offset: 2px;
+}
+
+.empty {
+  text-align: center;
+  padding: 60px;
+  font-size: 1.2rem;
+  color: #666;
+}
